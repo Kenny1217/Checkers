@@ -50,7 +50,20 @@ namespace Checkers
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-
+            Close(); //Closes game
         }
+
+        
+
+
+
+
+
+
+
+
+
+
+
     }
 }

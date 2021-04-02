@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\BoardModel.cs" />
     <Compile Include="Classes\PlayerModel.cs" />
+    <Compile Include="Classes\PlayerNameValidation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
