@@ -33,8 +33,8 @@ namespace Checkers
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblPlayer1 = new System.Windows.Forms.Label();
             this.lblPlayer2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPlayer1Name = new System.Windows.Forms.TextBox();
+            this.txtPlayer2Name = new System.Windows.Forms.TextBox();
             this.btnPlayer1Ok = new System.Windows.Forms.Button();
             this.btnPlayer2Ok = new System.Windows.Forms.Button();
             this.btnPlayer1Edit = new System.Windows.Forms.Button();
@@ -81,19 +81,19 @@ namespace Checkers
             this.lblPlayer2.TabIndex = 3;
             this.lblPlayer2.Text = "Player 2 (Black):";
             // 
-            // textBox1
+            // txtPlayer1Name
             // 
-            this.textBox1.Location = new System.Drawing.Point(246, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtPlayer1Name.Location = new System.Drawing.Point(246, 140);
+            this.txtPlayer1Name.Name = "txtPlayer1Name";
+            this.txtPlayer1Name.Size = new System.Drawing.Size(100, 20);
+            this.txtPlayer1Name.TabIndex = 4;
             // 
-            // textBox2
+            // txtPlayer2Name
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtPlayer2Name.Location = new System.Drawing.Point(246, 180);
+            this.txtPlayer2Name.Name = "txtPlayer2Name";
+            this.txtPlayer2Name.Size = new System.Drawing.Size(100, 20);
+            this.txtPlayer2Name.TabIndex = 5;
             // 
             // btnPlayer1Ok
             // 
@@ -166,8 +166,8 @@ namespace Checkers
             this.Controls.Add(this.btnPlayer1Edit);
             this.Controls.Add(this.btnPlayer2Ok);
             this.Controls.Add(this.btnPlayer1Ok);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPlayer2Name);
+            this.Controls.Add(this.txtPlayer1Name);
             this.Controls.Add(this.lblPlayer2);
             this.Controls.Add(this.lblPlayer1);
             this.Controls.Add(this.lblInstructions);
@@ -186,8 +186,8 @@ namespace Checkers
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Label lblPlayer1;
         private System.Windows.Forms.Label lblPlayer2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPlayer1Name;
+        private System.Windows.Forms.TextBox txtPlayer2Name;
         private System.Windows.Forms.Button btnPlayer1Ok;
         private System.Windows.Forms.Button btnPlayer2Ok;
         private System.Windows.Forms.Button btnPlayer1Edit;
