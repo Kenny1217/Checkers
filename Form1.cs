@@ -21,5 +21,36 @@ namespace Checkers
         {
 
         }
+
+        private void btnPlayer1Ok_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnPlayer2Ok_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlayer1Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlayer2Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
