@@ -27,9 +27,9 @@ namespace Checkers
         {
             string msg = "";
             PlayerNameValidation val = new PlayerNameValidation();
-            if (val.IsBlank(txtPlayer1Name.Text))
+            if (!val.IsBlank(txtPlayer1Name.Text))
             {
-                if (val.IsDigit(txtPlayer1Name.Text))
+                if (!val.IsDigit(txtPlayer1Name.Text))
                 {
                    txtPlayer1Name.ReadOnly = true;
                    btnPlayer1Ok.Enabled = false;
@@ -53,9 +53,9 @@ namespace Checkers
         {
             string msg = "";
             PlayerNameValidation val = new PlayerNameValidation();
-            if (val.IsBlank(txtPlayer2Name.Text))
+            if (!val.IsBlank(txtPlayer2Name.Text))
             {
-                if (val.IsDigit(txtPlayer2Name.Text))
+                if (!val.IsDigit(txtPlayer2Name.Text))
                 {
                     txtPlayer2Name.ReadOnly = true;
                     btnPlayer2Ok.Enabled = false;
@@ -77,12 +77,14 @@ namespace Checkers
 
         private void btnPlayer1Edit_Click(object sender, EventArgs e)
         {
-
+            txtPlayer1Name.ReadOnly = false;
+            btnPlayer1Ok.Enabled = true;
         }
 
         private void btnPlayer2Edit_Click(object sender, EventArgs e)
         {
-
+            txtPlayer2Name.ReadOnly = false;
+            btnPlayer2Ok.Enabled = true;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
