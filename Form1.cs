@@ -29,14 +29,23 @@ namespace Checkers
             PlayerNameValidation val = new PlayerNameValidation();
             if (!val.IsBlank(txtPlayer1Name.Text))
             {
-                if (!val.IsDigit(txtPlayer1Name.Text))
+                if (!val.IsSameName(txtPlayer1Name.Text,txtPlayer2Name.Text))
                 {
-                   txtPlayer1Name.ReadOnly = true;
-                   btnPlayer1Ok.Enabled = false;
+                    if (!val.IsDigit(txtPlayer1Name.Text))
+                    {
+                        txtPlayer1Name.ReadOnly = true;
+                        btnPlayer1Ok.Enabled = false;
+                    }
+                    else
+                    {
+                        msg = "Player 1 can not have a digit";
+                        txtPlayer1Name.Text = "";
+                        txtPlayer1Name.Focus();
+                    }
                 }
                 else
                 {
-                    msg = "Player 1 can not have a digit";
+                    msg = "Players can not have matching names";
                     txtPlayer1Name.Text = "";
                     txtPlayer1Name.Focus();
                 }
@@ -55,17 +64,26 @@ namespace Checkers
             PlayerNameValidation val = new PlayerNameValidation();
             if (!val.IsBlank(txtPlayer2Name.Text))
             {
-                if (!val.IsDigit(txtPlayer2Name.Text))
+                if (!val.IsSameName(txtPlayer2Name.Text, txtPlayer1Name.Text))
                 {
-                    txtPlayer2Name.ReadOnly = true;
-                    btnPlayer2Ok.Enabled = false;
+                    if (!val.IsDigit(txtPlayer2Name.Text))
+                    {
+                        txtPlayer2Name.ReadOnly = true;
+                        btnPlayer2Ok.Enabled = false;
+                    }
+                    else
+                    {
+                        msg = "Player 2 can not have a digit";
+                        txtPlayer2Name.Text = "";
+                        txtPlayer2Name.Focus();
+                    }
                 }
                 else
                 {
-                    msg = "Player 2 can not have a digit";
+                    msg = "Players names can not match";
                     txtPlayer2Name.Text = "";
                     txtPlayer2Name.Focus();
-                }
+                } 
             }
             else
             {
@@ -90,24 +108,17 @@ namespace Checkers
         private void btnStart_Click(object sender, EventArgs e)
         {
 
+
+
+
+
+
+
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close(); //Closes game
         }
-
-        
-
-
-
-
-
-
-
-
-
-
-
     }
 }
