@@ -1,7 +1,7 @@
 ﻿
 namespace Checkers
 {
-    partial class Form1
+    partial class frmSplashScreen
     {
         /// <summary>
         /// Required designer variable.

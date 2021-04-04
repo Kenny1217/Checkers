@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Checkers
 {
-    public partial class Form1 : Form
+    public partial class frmSplashScreen : Form
     {
-        public Form1()
+        public frmSplashScreen()
         {
             InitializeComponent();
         }
@@ -107,13 +107,19 @@ namespace Checkers
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
+            if (txtPlayer1Name.ReadOnly == true && txtPlayer2Name.ReadOnly == true) //Check if names have been entered
+            {
+                //Take player to form 2
+                string PlayerRed = txtPlayer1Name.Text; //Store red player name
+                string PlayerBlack = txtPlayer2Name.Text; //Store black player name
+                frmGameBoard frm2 = new frmGameBoard(); //Create form 2
+                frm2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please enter players name to play.");
+            }
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
